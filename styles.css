@@ -35,6 +35,10 @@ body {
     height: 75%; 
     background-color: #C8A2C8;
     border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .container {
@@ -60,6 +64,20 @@ body {
     line-height: 50px;
     margin: 10px;
     border-radius: 10px;
+  }
+
+  .next-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+  .next_button{
+    border-radius: 10px;
+    background-color:   #2A52BE;
+    color: white;
+    padding: 10px 20px;
+    font-size: 30px;
+    margin-right: 20px;
   }
   
   

@@ -12,13 +12,16 @@
 <body>
     <h1>Quiz</h1>
     <div class="rectangle">
-        <h2>Question 1/5</h2>
+        <h2 id="question-title">Question 1/5</h2>
         <div class = "container">
-            <div class="question">How many chromosomes are in the human genome?</div>
-            <button class="button" onclick="Click(this, false)">42</button>
-            <button class="button" onclick="Click(this, false)">44</button>
-            <button class="button" onclick="Click(this, true)">46</button>
-            <button class="button" onclick="Click(this, false)">48</button>
+            <div class="question" id="question-text">How many chromosomes are in the human genome?</div>
+            <button class="button" onclick="clickAnswer(this, false)">42</button>
+            <button class="button" onclick="clickAnswer(this, false)">44</button>
+            <button class="button" onclick="clickAnswer(this, true)">46</button>
+            <button class="button" onclick="clickAnswer(this, false)">48</button>
+        </div>
+        <div class="next-button-container">
+            <button class="next_button" onclick="nextQuestion()">Next</button>
         </div>
     </div>
     <script src="scripts.js"></script>
