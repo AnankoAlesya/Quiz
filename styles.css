@@ -1,23 +1,39 @@
+:root{
+  --night-blue:#1E213D;
+  --lilaс:#C8A2C8;
+  --indigo:#5D76CB;
+  --blue_azure:#2A52BE;
+  --white:#FFFFFF;
+  --margin-small: 10px;
+  --margin-medium: 20px;
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --button-border-radius:10px;
+  --titles-text-size:50px;
+  --questions-text-size:45px;
+  --answers-text-size:40px;
+  --next-text-size:30px;
+}
 *{
     font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 100;
-  font-size: 50px;
   font-style: normal;
-  color:#1E213D;
+  color: var(--night-blue);
 }
 h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    font-size: var(--titles-text-size);
+    height: 20px;
 }
 
 h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    font-size: 50px;
+    font-size: var(--titles-text-size);
+    height: 10px;
 }
 
 
@@ -33,11 +49,11 @@ body {
     transform: translate(-50%, -50%);
     width: 60%; 
     height: 75%; 
-    background-color: #C8A2C8;
-    border-radius: 10px;
+    background-color: var(--lilaс);
+    border-radius: var(--button-border-radius);
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: var(--padding-medium);
     box-sizing: border-box;
   }
 
@@ -48,8 +64,8 @@ body {
   }
   
   .question {
-    font-size: 45px;
-    margin-bottom: 20px;
+    font-size: var(--questions-text-size);
+    margin-bottom: var(--margin-medium);
     width: 100%;
     text-align: center;
   }
@@ -58,12 +74,13 @@ body {
     box-sizing: border-box; 
     width: calc(50% - 20px); 
     height: 15%;
-    background-color: #5D76CB;
-    color: white;
+    background-color: var(--indigo);
+    color: var(--white);
+    font-size: var(--answers-text-size);
     text-align: center;
     line-height: 50px;
-    margin: 10px;
-    border-radius: 10px;
+    margin: var(--margin-small);
+    border-radius: var(--button-border-radius);
   }
 
   .next-button-container {
@@ -72,12 +89,12 @@ body {
 }
 
   .next_button{
-    border-radius: 10px;
-    background-color:   #2A52BE;
-    color: white;
-    padding: 10px 20px;
-    font-size: 30px;
-    margin-right: 20px;
+    border-radius: var(--button-border-radius);
+    background-color: var(--blue_azure);
+    color: var(--white);
+    padding: var(--padding-small) var(--padding-medium);
+    font-size: var(--next-text-size);
+    margin-right: var(--margin-medium);
   }
   
   
