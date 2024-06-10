@@ -1,4 +1,5 @@
 let currentQuestionIndex = 0;
+let isAnswerSelected = false;
 
 const questions = [
     {
@@ -54,14 +55,21 @@ function clickAnswer(button, isCorrect) {
     } else {
         button.style.backgroundColor = 'red';
     }
+    isAnswerSelected = true;
 }
 
 function nextQuestion() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex >= questions.length) {
-        alert("Quiz completed!");
+    if (!isAnswerSelected) { 
+        alert("Please select an answer before proceeding to the next question.");
         return;
     }
+
+    if (currentQuestionIndex >= questions.length-1) {
+        alert("Quiz completed!");
+        document.getElementById("restart_button").style.display = 'block';
+        return;
+    }
+    currentQuestionIndex++
 
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById("question-title").innerText = `Question ${currentQuestionIndex + 1}/${questions.length}`;
@@ -73,4 +81,12 @@ function nextQuestion() {
         button.onclick = () => clickAnswer(button, currentQuestion.answers[index].isCorrect);
         button.style.backgroundColor = '#5D76CB'; 
     });
+    isAnswerSelected = false;
+}
+
+function restartQuiz() {
+    currentQuestionIndex = -1;
+    isAnswerSelected = true;
+    nextQuestion();
+    document.getElementById("restart_button").style.display = 'none';
 }
