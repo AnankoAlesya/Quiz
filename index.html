@@ -9,8 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="theme-light">
     <h1>Quiz</h1>
+    <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+    <div class="timer-container">
+    <div id="timer" class="timer">00:59</div>
+    </div>
     <div class="rectangle">
         <h2 id="question-title">Question 1/5</h2>
         <div class = "container">
@@ -25,6 +32,14 @@
             <button class="next_button" id="restart_button" onclick="restartQuiz()" style="display: none;">Restart</button>
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <div id="warningPopup" class="popup">
+        <span class="popuptext">Please select an answer before proceeding to the next question.</span>
+    </div>
+    
+    <div id="scorePopup" class="popup">
+        <span class="popuptext">Quiz completed! You have earned <span id="scoreValue" class="score-value">0</span> points</span>
+    </div>
+    <script src = "./constants.js"></script>
+    <script src = "./scripts.js"></script>
 </body>
 </html>
